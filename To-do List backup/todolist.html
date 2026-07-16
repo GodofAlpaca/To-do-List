@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="brain.js"></script>
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="topbar title">To-Do List</h1>
+      <p class="topbar timestamp" id="title-time"></p>
+    </header>
+    <main>
+
+      <section class="profile">
+        <img
+          class="profilepic"
+          src="./assets/profilepic.jpg"
+          alt="profile picture"
+        />
+        <div class="profilewrapper">
+          <h2 class="profilename">Christian. S</h2>
+          <p class="profilepos">Full Stack Developer</p>
+        </div>
+      </section>
+
+      <section class="todolistinput">
+        <form id="tdl" class="tdlcontainer" novalidate>
+
+          <div class="tdlhead">
+            <h2 class="tdl-title">New Task</h2>
+            <div class="tdl-inputs">
+              <label for="Task Name"
+                >Task Name<span aria-hidden="true">*</span></label
+              >
+              <input type="text" id="taskname" placeholder="Type here..." />
+            </div>
+            <div class="tdl-inputs">
+              <label for="Task detes">Task Details<span aria-hidden="true">*</span></label>
+              <input type="text" id="taskdetes" placeholder="Type here..." />
+            </div>
+          </div>
+
+          <div clas="tdlfoot">
+            <div class="tdl-inputs">
+              <label for="task importance">Importance<span aria-hidden="true">*</span></label>
+              <select id="taskimp" class="taskimp" title="task importance">
+                <option value="low">Low</option>
+                <option value="med">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+
+            <div class="tdl-inputs">
+              <label for="Due Date">Due date</label>
+              <input type="date" class="due-date" id="duedate" placeholder="insert date...">
+            </div>
+          </div>
+
+          <button type="submit" id="lodge" class="lodge">Lodge Task</button>
+        </form>
+
+      </section>
+
+    </main>
+
+  </body>
+</html>

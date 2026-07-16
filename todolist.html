@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="brain.js"></script>
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="topbar title">To-Do List</h1>
+      <p class="topbar timestamp" id="title-time"></p>
+    </header>
+    <main>
+
+      <section class="profile">
+        <img
+          class="profilepic"
+          src="./assets/profilepic.jpg"
+          alt="profile picture"
+        />
+        <div class="profilewrapper">
+          <h2 class="profilename">Christian. S</h2>
+          <p class="profilepos">Full Stack Developer</p>
+        </div>
+      </section>
+
+      <section class="todolistinput">
+        <form id="tdl" class="tdlcontainer" novalidate>
+
+          <div class="tdlhead">
+            <h2 class="tdl-title">New Task</h2>
+            <div class="tdl-inputs">
+              <label for="taskname"
+                >Task Name<span aria-hidden="true">*</span></label
+              >
+              <input type="text" id="taskname" placeholder="Type here..." />
+            </div>
+            <div class="tdl-inputs">
+              <label for="taskdetes">Task Details<span aria-hidden="true">*</span></label>
+              <input type="text" id="taskdetes" placeholder="Type here..." />
+            </div>
+          </div>
+
+          <div class="tdlfoot">
+            <div class="tdl-inputs">
+              <label for="taskimp">Importance<span aria-hidden="true">*</span></label>
+              <select id="taskimp" class="taskimp" title="task importance">
+                <option value="low">Low</option>
+                <option value="med">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+
+            <div class="tdl-inputs">
+              <label for="duedate">Insert Due date</label>
+              <input type="date" class="due-date" id="duedate" placeholder="Insert date">
+            </div>
+          </div>
+
+          <p id="tdl-error" class="tdl-error" hidden>Task name and details are required.</p>
+
+          <button type="submit" id="lodge" class="lodge">Lodge Task</button>
+        </form>
+
+      </section>
+
+      <section class="tasklist">
+        <div class="tasklist-header">
+          <h2>Tasks</h2>
+          <button type="button" id="deleteAll" class="delete-all">Delete All</button>
+        </div>
+
+        <div class="tasklist-body">
+          <div class="task-group">
+            <h3 class="task-group-title">Pending</h3>
+            <ul id="pendingTasks" class="task-items"></ul>
+            <p id="pendingEmpty" class="task-empty">No pending tasks yet.</p>
+          </div>
+
+          <div class="task-group">
+            <h3 class="task-group-title">Completed</h3>
+            <ul id="completedTasks" class="task-items"></ul>
+            <p id="completedEmpty" class="task-empty">Nothing completed yet.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </body>
+</html>
